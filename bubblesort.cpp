@@ -23,9 +23,10 @@ int main(){
         cin>>arr[i];
     }
     bubblesort(arr,n);
-    cout << " bubble sorted Array : ";
-    for(int i =0; i<n ; i++){
+    cout << "Bubble sorted Array: ";
+    for(int i =0; i<n; i++){
         cout<<arr[i]<<" ";
     }
     cout<<endl;
+    return 0;
 }
