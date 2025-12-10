@@ -2,20 +2,20 @@
 using namespace std;
 // using recusrsion find the binary search 
 int binarysearch(int arr[] , int s , int e , int key){
-    // base case
     if(s<=e){
-        int mid = s + (e-s)/2; // to avoid overflow
+        int mid = s+(e-s)/2;
+
         if(arr[mid] == key){
-            return mid;
+            return key;
         }
         else if(arr[mid] < key){
-            return binarysearch(arr, mid+1 , e , key);
+            return binarysearch(arr , mid+1, e , key);
         }
         else{
             return binarysearch(arr , s , mid-1 , key);
         }
     }
-    return -1;
+    return -1; // element not found
 }
 int main(){
     int n;
